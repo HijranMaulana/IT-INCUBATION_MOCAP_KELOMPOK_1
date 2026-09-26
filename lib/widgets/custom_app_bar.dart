@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/messages_screen.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -23,8 +24,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         IconButton(
           icon: const Icon(Icons.send_outlined, color: Colors.black),
-          onPressed: () {},
-        ),
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (_) => const MessagesScreen(),
+              ),
+            );
+          },
+        ),  
       ],
     );
   }
