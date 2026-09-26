@@ -15,18 +15,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           const StoryList(),
           const Divider(),
-          ...dummyPosts.map((post) => PostCard(post: post)).toList(),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.black,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.add_box_outlined), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite_border), label: ""),
-          BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: ""),
+          ...dummyPosts.map((post) => PostCard(post: post)),
         ],
       ),
     );
