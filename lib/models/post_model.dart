@@ -75,7 +75,7 @@ class UserModel {
 UserModel dummyUser = UserModel(
   username: "mocap.kelompok1",
   name: "Kelompok 1",
-  profileImage: "https://i.pravatar.cc/150?img=1",
+  profileImage: "",
   bio: "Flutter Dev\n Malang, Indonesia",
   posts: 24,
   followers: 6520,
