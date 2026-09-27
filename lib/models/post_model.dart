@@ -69,3 +69,8 @@ List<String> dummyGridImages = List.generate(
   15,
   (index) => "https://picsum.photos/id/${(index + 10) * 3}/300/300",
 );
+
+List<String> dummyExploreImages = List.generate(
+  30,
+  (index) => "https://picsum.photos/id/${(index + 20) * 7}/300/300",
+);
