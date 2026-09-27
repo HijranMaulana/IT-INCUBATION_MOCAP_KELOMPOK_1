@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
 import 'package:instagram_ui1/widgets/profile_screen.dart';
+import 'notification_screen.dart';   // <-- 1. tambahkan import ini
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -16,7 +17,7 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(),
     Center(child: Text("Search Page")),
     Center(child: Text("Add Post Page")),
-    Center(child: Text("Notifications Page")),
+    NotificationScreen(),   // <-- 2. ganti placeholder jadi ini
     ProfileScreen(),
   ];
 
