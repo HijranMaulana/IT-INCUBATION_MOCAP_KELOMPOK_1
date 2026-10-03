@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screens/messages_screen.dart';
+import '../screens/notification_screen.dart';   // <-- tambahkan import ini
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -12,7 +13,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: const Text(
         "Instagram",
         style: TextStyle(
-          fontFamily: 'Billabong', // opsional, kalau ga ada font ini pakai default
+          fontFamily: 'Billabong',
           fontSize: 28,
           color: Colors.black,
         ),
@@ -20,7 +21,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           icon: const Icon(Icons.favorite_border, color: Colors.black),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (_) => const NotificationScreen(),
+              ),
+            );
+          },
         ),
         IconButton(
           icon: const Icon(Icons.send_outlined, color: Colors.black),
@@ -31,7 +38,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             );
           },
-        ),  
+        ),
       ],
     );
   }
